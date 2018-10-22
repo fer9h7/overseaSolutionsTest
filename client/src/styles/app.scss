@@ -1,0 +1,9 @@
+@import "bootstrap/bootstrap";
+@import "responsive";
+
+@media print {
+    .breadcrumb {
+        display: none !important;
+    }
+}
+
