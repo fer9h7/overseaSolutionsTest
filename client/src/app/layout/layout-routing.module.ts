@@ -8,7 +8,8 @@ const routes: Routes = [
         component: LayoutComponent,
         children: [
             { path: '', redirectTo: 'dates-list', pathMatch: 'prefix' },
-            { path: 'dates-list', loadChildren: './dates-list/dates-list.module#DatesListModule', }            
+            { path: 'dates-list', loadChildren: './dates-list/dates-list.module#DatesListModule', },
+            { path: 'dates/:id', loadChildren: './date-detail/date-detail.module#DateDetailModule', }            
         ],     
     }
 ];
