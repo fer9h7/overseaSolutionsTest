@@ -1,12 +1,26 @@
-<div class="row">
-	<div class="col-sm-12">
-		<p>
-		  dates-list works!
-		</p>
+<div class="container">
+	<div class="col-xs-8 col-sm-10 col-md-6 col-lg-5 dates-container" >
+		<div class="card">
+			<div class="card-header">
+		        <h4 class="modal-title">Calendar</h4>
+		    </div>
+			<div class="card-body">
+				<div (click)="selectDate(item)" *ngFor="let item of data" class="col-sm-12 date-row">
+					<div class="row">
+						<div class="col-sm-4 day-label">
+							{{days[item.date.getDay()]}}
+						</div>
+						<div class="col-sm-4 col-sm-offset-4">
+							Today
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-2">
+							{{item.date.getDate()}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
-
-
-
-
-
