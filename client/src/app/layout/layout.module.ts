@@ -10,6 +10,7 @@ import { LayoutComponent } from './layout.component';
         LayoutRoutingModule,
         TranslateModule,
     ],
-    declarations: [LayoutComponent]    
+    declarations: [LayoutComponent],
+
 })
 export class LayoutModule {}

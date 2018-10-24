@@ -1,3 +1,14 @@
+
+@media screen and (max-width: 768px) {
+   .dates-container{
+	    padding: 0rem !important;
+	    background-color: white;
+	    color: black;
+	    border-radius: 15px 50px 30px;
+	    margin:auto;
+	}
+}
+
 .dates-container{
     padding: 3rem;
     background-color: white;
@@ -16,6 +27,24 @@
 	padding-bottom: 1rem;
 }
 
+.detail-row{
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
 .date-row:hover{
 	color: orange;
+}
+
+.today{
+	background-color: #000080;
+	color: white;
+}
+
+.future-date{
+	background-color: #b3ccff;
+}
+
+.past-date{
+	background-color: #d6d6c2;
 }

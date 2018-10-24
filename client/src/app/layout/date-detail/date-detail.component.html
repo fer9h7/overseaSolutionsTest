@@ -1,3 +1,24 @@
-<p>
-  date-detail works!
-</p>
+<div class="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-6 dates-container" >
+	<div class="card">
+		<div class="card-header">
+	        <h4 class="modal-title">{{header}}</h4>
+	    </div>
+		<div *ngIf="data" [ngClass]="getClass()" class="card-body">
+			<div *ngFor="let item of data.appointments" class="col-sm-12 detail-row">
+				<div class="row">
+					<div class="col-sm-4">
+						{{item.startTime}}
+					</div>
+					<div class="col-sm-4">
+						{{item.endTime}}
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 col-sm-12">
+						{{item.subject}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
