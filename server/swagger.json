@@ -1,0 +1,110 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Simple Test API",
+        "description": "A simple test API for oversea solutions"
+    },
+    "schemes": [
+        "http"
+    ],
+    "host": "localhost:1337",
+    "basePath": "/",
+    "paths": {
+        "/dates": {
+            "get": {
+                "summary": "Gets a list of dates",
+                "description": "Returns a list containing dates.",
+                "responses": {
+                    "200": {
+                        "description": "A list of Dates",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "properties": {
+                                    "id": {
+                                        "type": "string"
+                                    },
+                                    "date": {
+                                        "type": "date"
+                                    },
+                                    "appointments": {
+                                        "type": "array",
+                                        "items": {
+                                            "properties": {
+                                                "startTime": {
+                                                    "type": "string"
+                                                },
+                                                "endTime": {
+                                                    "type": "string"
+                                                },
+                                                "subject": {
+                                                    "type": "string"
+                                                },
+                                                "Description": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "/dates/{id}": {
+            "get": {
+                "summary": "Gets a specific date",
+                "description": "Returns a single date.",
+                "parameters": [{
+                                    "name": "id",
+                                    "in": "path",
+                                    "required": true,
+                                    "description": "date.id",
+                                    "schema": {
+                                        "type": "integer",
+                                        "minimum": 1
+                                    }                    
+                                }],
+                "responses": {
+                    "200": {
+                        "description": "A single Date",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "date": {
+                                    "type": "date"
+                                },
+                                "appointments": {
+                                    "type": "array",
+                                    "items": {
+                                        "properties": {
+                                            "startTime": {
+                                                "type": "string"
+                                            },
+                                            "endTime": {
+                                                "type": "string"
+                                            },
+                                            "subject": {
+                                                "type": "string"
+                                            },
+                                            "Description": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
