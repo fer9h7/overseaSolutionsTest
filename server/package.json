@@ -4,11 +4,14 @@
   "private": false,
   "scripts": {
     "start": "node app.js",
-    "inspect": "node --inspect app.js"
+    "inspect": "node --inspect app.js",
+    "test": "mocha 'test/apiTest.js'"
   },
   "dependencies": {
     "cors": "^2.8.4",
     "express": "^4.16.4"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "supertest": "^3.3.0"
+  }
 }
